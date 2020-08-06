@@ -106,8 +106,7 @@ img.icon-share {
     }
 
     .content {
-        width: calc(100% - 50px);
-        margin: 0 auto;
+        width: calc(100% - 30px);
         font-size: 10px
     }
 

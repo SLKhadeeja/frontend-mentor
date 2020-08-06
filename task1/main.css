@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    color: hsl(214, 17%, 51%);
+}
+
+h2, h4 {
+    color: hsl(217, 19%, 35%);
+}
+
+h4, p {
+    margin: 0;
+}
+
+
+.card {
+    display: flex;
+    height: 240px;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    margin: calc(calc(100vh - 240px)/2) auto;
+    box-shadow: 4px 3px 3px 2px hsla(212, 23%, 69%, 0.616) ;
+    margin-bottom: 40px;
+}
+
+img.drawer-image {
+    height: 100%;
+    width: 40%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div.description {
+    height: 70%
+}
+
+.description > h2 {
+    font-weight: 700;
+}
+
+.description > p {
+    font-weight: 500;
+}
+
+img.avartar-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.footer {
+    display: flex;
+}
+
+.name-date {
+    display: grid;
+    padding: 0 15px;
+    padding-top: 0.5em;
+    margin: 0
+}
+
+img.icon-share {
+    margin: auto;
+    margin-right: 0;
+    
+}
+
+.attribution {
+    margin:0 auto;
+    display: table;
+}
+
+@media screen and (max-width: 425px) {
+    .card {
+        display: grid;
+        height: 400px;
+        width: 250px;
+        background-color: white;
+        border-radius: 15px;
+        margin: calc(calc(100vh - 400px)/2) auto;
+        margin-bottom: 5px;
+    }
+
+    img.drawer-image {
+        height: 13em;
+        width: 100%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+
+    .content {
+        width: calc(100% - 50px);
+        margin: 0 auto;
+        font-size: 10px
+    }
+
+    .description > h2 {
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+
+    img.avartar-image{
+        height: 30px;
+        width: 30px;
+    }
+
+    .footer {
+        margin: 0.5em auto;
+    }
+
+    .attribution {
+        display: grid;
+        text-align: center;
+        font-size: 1.5px;
+    }
+}

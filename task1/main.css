@@ -7,6 +7,11 @@ body {
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     color: hsl(214, 17%, 51%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h2, h4 {
@@ -24,8 +29,7 @@ h4, p {
     width: 700px;
     background-color: white;
     border-radius: 15px;
-    margin: calc(calc(100vh - 240px)/2) auto;
-    box-shadow: 4px 3px 3px 2px hsla(212, 23%, 69%, 0.616) ;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1) ;
     margin-bottom: 40px;
 }
 
@@ -123,6 +127,6 @@ img.icon-share {
     .attribution {
         display: grid;
         text-align: center;
-        font-size: 1.5px;
+        font-size: 1.5vh;
     }
 }

@@ -7,7 +7,7 @@ body {
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     color: hsl(214, 17%, 51%);
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,6 +65,7 @@ img.avartar-image{
 
 .footer {
     display: flex;
+    width: 100%;
 }
 
 .name-date {
@@ -125,7 +126,6 @@ img.icon-share {
     }
 
     .attribution {
-        display: grid;
         text-align: center;
         font-size: 1.5vh;
     }

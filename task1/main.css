@@ -7,7 +7,7 @@ body {
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     color: hsl(214, 17%, 51%);
-    height: 100%;
+    height: 97vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,6 +41,7 @@ img.drawer-image {
 }
 
 .content {
+    padding: 10px;
     width: 50%;
     margin: 0 auto;
 }

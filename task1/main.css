@@ -7,7 +7,7 @@ body {
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
     color: hsl(214, 17%, 51%);
-    height: 97vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,10 +22,13 @@ h4, p {
     margin: 0;
 }
 
+a {
+    margin: auto;
+}
+
 
 .card {
     display: flex;
-    height: 240px;
     width: 700px;
     background-color: white;
     border-radius: 15px;
@@ -41,17 +44,14 @@ img.drawer-image {
 }
 
 .content {
-    padding: 0.2em;
-    width: 50%;
     margin: 0 auto;
-}
-
-div.description {
-    height: 70%
+    width: 50%;
+    padding: 20px;
 }
 
 .description > h2 {
     font-weight: 700;
+    margin-top: 0;
 }
 
 .description > p {
@@ -67,6 +67,7 @@ img.avartar-image{
 .footer {
     display: flex;
     width: 100%;
+    padding-top: 10px;
 }
 
 .name-date {
@@ -76,10 +77,63 @@ img.avartar-image{
     margin: 0
 }
 
-img.icon-share {
+.icon-share:hover {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.icon-share:hover > i {
+    padding: 8px;
+    color: white;
+}
+
+
+.share {
+    display: none;
+}
+
+.share.popUp {
+    width: 158px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    display: flex;
+    left: 65.5%;
+    top: 50%;
+}
+
+.share.popUp::after {
+    position: absolute;
+    left: 50%;
+    content: "";
+    bottom: -10px;
+    border-top: 10px solid hsl(217, 19%, 35%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateX(-50%);
+}
+
+.share.popUp > div {
     margin: auto;
-    margin-right: 0;
-    
+    display: flex;
+    font-size: 0.9em;
+}
+
+.share.popUp > div > p {
+    padding: 7px;
+    letter-spacing: 3px;
+    font-size: 0.5px;
+    margin: auto;
+}
+
+img.popUp-icon {
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    margin: auto;
 }
 
 .attribution {
@@ -90,7 +144,7 @@ img.icon-share {
 @media screen and (max-width: 425px) {
     .card {
         display: grid;
-        height: 400px;
+        /* height: 400px; */
         width: 250px;
         background-color: white;
         border-radius: 15px;
@@ -122,6 +176,10 @@ img.icon-share {
 
     .footer {
         padding: 0.5em;
+    }
+
+    .share.popUp{
+        
     }
 
     .attribution {

@@ -6,7 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="./main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <script src="./script.js"></script>
 
   <title>Frontend Mentor | Article preview component</title>
 
@@ -26,6 +29,16 @@
           I've got some simple tips to help you make anyroom feel complete.
         </p>
       </div>
+
+      <div id="share-mod" class="share">
+        <div>
+          <p>SHARE</p>
+          <img class="popUp-icon" src="./images/icon-facebook.svg" alt="facebook icon" />
+          <img class="popUp-icon" src="./images/icon-twitter.svg" alt="twitter icon">
+          <img class="popUp-icon" src="./images/icon-pinterest.svg" alt="pinterest icon">
+        </div>
+      </div>
+
       <div class="footer">
         <div class="artist footer">
           <img class="avartar-image" src="./images/avatar-michelle.jpg" alt="avatar-michelle">
@@ -34,8 +47,11 @@
             <p>28 Jun 2020</p>
           </div>
         </div>
-        <img class="icon-share" src="./images/icon-share.svg" alt="share icon">
+        <a id="share-fa" class="icon-share" onclick="popUp()" >
+          <i class="fa fa-share"></i>
+        </a>
       </div>
+
     </div>
   </div>
   

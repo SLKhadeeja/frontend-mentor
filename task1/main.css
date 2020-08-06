@@ -94,7 +94,6 @@ img.icon-share {
         width: 250px;
         background-color: white;
         border-radius: 15px;
-        margin: calc(calc(100vh - 400px)/2) auto;
         margin-bottom: 5px;
     }
 

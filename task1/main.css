@@ -127,6 +127,11 @@ img.avartar-image{
     letter-spacing: 3px;
     font-size: 0.5px;
     margin: auto;
+    color: #fff;
+}
+
+.mobile {
+    display: none;
 }
 
 img.popUp-icon {
@@ -144,7 +149,6 @@ img.popUp-icon {
 @media screen and (max-width: 425px) {
     .card {
         display: grid;
-        /* height: 400px; */
         width: 250px;
         background-color: white;
         border-radius: 15px;
@@ -182,6 +186,14 @@ img.popUp-icon {
         display: none;
     }
 
+    .mobile {
+        display: unset;
+    }
+
+    a#share-fa.icon-share.mobile {
+        margin-left: 3em;
+    }
+
     .share.popUp{
         position: unset;
         width: 100%;
@@ -190,15 +202,13 @@ img.popUp-icon {
         border-top-right-radius: 0;
     }
 
-    .icon-share.opened {
-        height: 30px;
-        width: 30px;
+    .share.popUp .icon-share {
         border-radius: 50%;
-        background-color: hsl(210, 46%, 95%);
+        background-color: hsla(0, 0%, 100%, 0.404);
     }
     
-    .icon-share.opened > i {
-        padding: 8px;
+    .share.popUp .icon-share > i {
+        padding: 5px;
         color: hsl(217, 19%, 35%);
     }
 

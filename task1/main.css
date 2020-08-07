@@ -28,6 +28,7 @@ a {
 
 
 .card {
+    position: relative;
     display: flex;
     width: 700px;
     background-color: white;
@@ -101,8 +102,8 @@ img.avartar-image{
     background-color: hsl(217, 19%, 35%);
     position: absolute;
     display: flex;
-    left: 65.5%;
-    top: 50%;
+    right: -10px;
+    bottom: 80px;
 }
 
 .share.popUp::after {
@@ -124,8 +125,8 @@ img.avartar-image{
 
 .share.popUp > div > p {
     padding: 7px;
-    letter-spacing: 3px;
-    font-size: 0.5px;
+    letter-spacing: 5px;
+    font-size: 1em;
     margin: auto;
     color: #fff;
 }
@@ -200,6 +201,10 @@ img.popUp-icon {
         height: 50px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+
+    .share.popUp::after {
+        display: none;
     }
 
     .share.popUp .icon-share {

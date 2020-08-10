@@ -1,0 +1,54 @@
+body {
+    width: 1440px;
+    max-width: calc(100% - 20px);
+    font-family: 'Inter', sans-serif;
+    color: hsl(240, 38%, 20%);
+    background: url(./images/pattern-bg.svg) right bottom no-repeat,
+                url(./images/pattern-curve.svg) left bottom no-repeat
+                /* url(./images/pattern-quotes.svg) left top no-repeat */;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-weight: 300;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+p.quote {
+    font-size: 32px;
+}
+
+p.role {
+    color: hsl(240, 18%, 77%);
+}
+
+.slide {
+    display: flex;
+    padding: 10vw;
+}
+
+.content {
+    align-self: center;
+    padding: 20px;
+}
+
+img.avatar-image {
+    height: 100vh;
+    width: 100vh;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+}
+
+.role {
+    padding: 10px;
+}

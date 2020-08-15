@@ -77,7 +77,13 @@ img.avatar-image {
     width: 70px;
     border-radius: 20px;
     position: absolute;
-    top: 80%;
+    top: calc(100% - 50px);
+    text-align: center;
+    align-items: center;
+}
+
+.controls > div {
+    padding: 9px;
 }
 
 .footer {
@@ -89,8 +95,28 @@ img.avatar-image {
     padding-left: 10px;
 }
 
+.fas {
+    position: absolute;
+}
+
+.fa-chevron-left {
+    left: 0;
+    padding-left: 7px;
+}
+
+.fa-chevron-right {
+    right: 0;
+    padding-right: 7px;
+}
+
 .attribution {
     margin-top: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .controls {
+        top: calc(100% - 100px);
+    }
 }
 
 @media screen and (max-width: 425px) {

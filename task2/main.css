@@ -3,15 +3,14 @@ body {
     max-width: calc(100% - 20px);
     font-family: 'Inter', sans-serif;
     color: hsl(240, 38%, 20%);
-    /* background: url(./images/pattern-bg.svg) right bottom no-repeat,
-                url(./images/pattern-curve.svg) left bottom no-repeat
-                /* url(./images/pattern-quotes.svg) left top no-repeat;  */
+    background: url(./images/pattern-curve.svg) left bottom no-repeat; 
     height: 97vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 p {
@@ -45,6 +44,8 @@ p.role {
 .slide {
     display: none;
     animation: slide 0.6s  forwards;
+    background: url(./images/pattern-bg.svg) right bottom no-repeat;
+    background-size: contain;
 }
 
 @keyframes slide {
@@ -60,6 +61,7 @@ p.role {
     z-index: 10;
     min-width: 400px;
     max-width: 600px;
+    background: url(./images/pattern-quotes.svg) center top no-repeat;
 }
 
 .avatar {
@@ -127,14 +129,20 @@ img.avatar-image {
 }
 
 @media screen and (max-width: 425px) {
+    body {
+        background-size: 100vw;
+    }
+
     .slide {
         flex-direction: column-reverse;
+        background: none;
     }
 
     .content {
         max-width: calc(100% - 50px);
         min-width: 0;
         left: 0;
+        background-size: 20%;
     }
 
     p.quote {
@@ -153,7 +161,7 @@ img.avatar-image {
 
     .avatar {
         margin: auto;
-        margin-top: 10vw;
+        margin-bottom: 10vw;
         min-width: 220px;
     }
 
@@ -166,7 +174,6 @@ img.avatar-image {
     }
 
     .attribution {
-        margin-top: 12px;
         font-size: 12px;
     }
 }

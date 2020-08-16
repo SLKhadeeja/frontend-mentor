@@ -42,7 +42,13 @@ p.role {
 } */
 
 .slide {
-    display: flex;
+    display: none;
+    animation: slide 2s  forwards;
+}
+
+@keyframes slide {
+    0% {transform: translateX(900px);}
+    100% {transform: translateX(0);}
 }
 
 .content {

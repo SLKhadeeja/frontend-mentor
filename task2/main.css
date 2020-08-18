@@ -139,7 +139,8 @@ img.avatar-image {
 
     .slide {
         flex-direction: column-reverse;
-        background: none;
+        background-size: 48vh;
+        background-position: top;
     }
 
     .content {
@@ -150,7 +151,7 @@ img.avatar-image {
     }
 
     p.quote {
-        font-size: 1.2em;
+        font-size: 1em;
         text-align: center;
     }
 
@@ -178,6 +179,7 @@ img.avatar-image {
     }
 
     .attribution {
-        font-size: 12px;
+        font-size: 10px;
+        text-align: center;
     }
 }

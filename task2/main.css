@@ -1,3 +1,7 @@
+html {
+    overflow: hidden;
+}
+
 body {
     width: 1440px;
     max-width: calc(100% - 20px);

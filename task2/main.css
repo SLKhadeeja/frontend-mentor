@@ -33,18 +33,6 @@ p.role {
     color: hsl(240, 18%, 77%);
 }
 
-/* .background {
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    width: 700px;
-    max-width: 100%;
-}
-
-.background > img {
-    width: 100%;
-} */
-
 .slide {
     display: none;
     animation: slide 0.6s  forwards;
@@ -126,6 +114,7 @@ img.avatar-image {
     margin-top: 10px;
 }
 
+
 @media screen and (max-width: 768px){
     .controls {
         top: calc(100% - 100px);
@@ -134,14 +123,16 @@ img.avatar-image {
 
 @media screen and (max-width: 425px) {
     body {
-        background-size: 100vw;
+        background-size: 100%;
     }
 
     .slide {
         flex-direction: column-reverse;
-        background-size: 48vh;
-        background-position: top;
+        /* background-size: 48vh;
+        background-position: top; */
+        background: none;
     }
+
 
     .content {
         max-width: calc(100% - 50px);

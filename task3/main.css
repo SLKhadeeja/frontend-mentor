@@ -1,9 +1,9 @@
-* {
-    box-sizing: border-box;
+html {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    width: 1440px;
     max-width: 100%;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -40,6 +40,10 @@ footer {
     justify-content: space-around;
     align-items: baseline;
     padding: 30px;
+}
+
+ul {
+    padding: 0;
 }
 
 .left-nav {
@@ -115,32 +119,44 @@ img.logo {
 
 .hero-image > img {
     width: 550px;
+    max-width: 100%
 }
 
 #section-2 {
     background-color: hsla(0, 0%, 75%, 0.356);
+    position: relative;
+    padding: 10px;
+    padding-bottom: 100px;
+    margin-top: 100px;
 }
 
 .shorten {
     border-radius: 10px;
-    width: 150px;
+    width: 10%;
     height: 50px;
 }
 
 .link-input-card {
+    position: absolute;
     display: flex;
     align-items: center;
     height: 130px;
-    margin: 3em 8em;
+    width: 1300px;
+    max-width: calc(100% - 20px);
     border-radius: 15px;
     justify-content: space-evenly;
-    background: url(./images/bg-shorten-mobile.svg) no-repeat;
+    background: url(./images/bg-shorten-desktop.svg) no-repeat;
     background-size: cover;
     background-color: hsl(257, 27%, 26%);
+    bottom: 100%;
+    left: 50%;
+    right: 0;
+    top: 0;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .link-input-card > input {
-    width: 65%;
+    width: 80%;
     height: 40px;
     padding: 5px;
     border-radius: 5px;
@@ -150,6 +166,7 @@ img.logo {
 
 .lower-content {
     margin: 7em auto;
+    margin-bottom: 0;
     text-align: center;
     width: 500px;
 
@@ -158,7 +175,6 @@ img.logo {
 .lower-content > h2 {
     font-size: 2em;
     font-weight: 700;
-    margin: 0;
 }
 
 .content-card {
@@ -166,8 +182,24 @@ img.logo {
     background-color: #fff;
     display: grid;
     width: 350px;
-    padding: 0 25px;
+    padding: 25px;
     position: relative;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+.content-card > p {
+    margin: 0;
+}
+
+.linked::after {
+    content: '';
+    width: 100px;
+    height: 10px;
+    background-color: hsl(180, 66%, 49%);
+    position: absolute;
+    top: 50%;
+    left: 100%;
 }
 
 .icon{
@@ -179,22 +211,30 @@ img.logo {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -16%;
+    left: 10%;
+    transform: translateY(-50%);
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-around;
-    padding: 150px;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+}
+
+#card2 {
+    top: 50px;
+}
+
+#card3 {
+    top: 100px;
 }
 
 .boost {
-    background: url(./images/bg-boost-mobile.svg) no-repeat;
-    background-size: cover;
+    background: url(./images/bg-boost-desktop.svg);
+    background-size: fit-content;
     background-color: hsl(257, 27%, 26%);
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-flow: column;
     height: 200px;
     text-align: center;
     align-content: center;
@@ -241,6 +281,26 @@ img.logo {
      font-weight: 600;
     }
 
+@media screen and (max-width: 1000px){
+    .cards-container {
+        flex-flow: column;
+    }
+
+    .linked::after {
+        width: 10px;
+        height: 100px;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .content-card {
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 425px) {
     nav {
         justify-content: space-between;
@@ -257,11 +317,6 @@ img.logo {
     img.logo {
         width: 250px;
         padding: 1.5em;
-    }
-
-    .hero-image > img {
-        padding: 0 13%;
-        margin-left: 14%;
     }
 
     .hero {
@@ -287,7 +342,6 @@ img.logo {
 
     .link-input-card {
         flex-flow: column;
-        margin: 10%;
     }
 
     .link-input-card > input {
@@ -300,7 +354,6 @@ img.logo {
 
     .lower-content {
         width: calc(100% - 20%);
-        margin: auto;
     }
 
     .lower-content > h2 {
@@ -309,7 +362,6 @@ img.logo {
     }
     
     .cards-container {
-        grid-template-columns: auto;
         padding: 30px;
         max-width: 100%;
     }
@@ -334,6 +386,12 @@ img.logo {
         left: 0;
         right: 0;
         margin: auto;
+        transform: translateY(-100%);
+    }
+
+    .boost {
+        background: url(./images/bg-boost-mobile.svg) repeat-x;
+        background-color: hsl(257, 27%, 26%);
     }
 
     .boost > h2 {
@@ -349,5 +407,7 @@ img.logo {
     .footer-list {
         display: block;
     }
+
+
 
 }

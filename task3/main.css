@@ -90,6 +90,10 @@ img.logo {
     color: hsl(257, 7%, 63%)
 }
 
+.fa-bars {
+    display: none;
+}
+
 .get-started {
     width: 150px;
 }
@@ -301,10 +305,17 @@ img.logo {
     }
 }
 
-@media screen and (max-width: 425px) {
-    nav {
-        justify-content: space-between;
+@media screen and (max-width: 768px) {
+    .hero-content {
+        padding: 0 2em;
     }
+
+    .hero-content > h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 425px) {
 
     .navbar-items {
         display: none;
@@ -314,8 +325,14 @@ img.logo {
         display: none;
     }
 
+    .fa-bars {
+        display: block;
+        font-size: 1.5em;
+        color: hsl(255, 11%, 22%);
+    }
+
     img.logo {
-        width: 250px;
+        width: 130px;
         padding: 1.5em;
     }
 

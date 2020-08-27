@@ -85,6 +85,10 @@ img.logo {
     font-weight: 700;
 }
 
+.button:hover {
+    background-color: hsl(180, 52%, 74%);
+}
+
 .login {
     background-color: white;
     color: hsl(257, 7%, 63%)
@@ -134,7 +138,7 @@ img.logo {
     margin-top: 100px;
 }
 
-.shorten, .copy {
+.shorten {
     border-radius: 10px;
     width: 10%;
     height: 50px;
@@ -168,22 +172,25 @@ img.logo {
     justify-content: space-evenly;
     background-color: #fff;
     position: relative;
-    padding: 1em 0;
     text-align: left;
-    transform: translateY(50%) translateX(10px);
+    transform: translateY(100%) translateX(10px);
+    margin: 10px 0;
 }
 
 .original-link  {
     margin: 0;
     color: hsl(255, 11%, 22%);
-}
-
-.shortened-link-card > p {
-    width: 10%;
+    width: 60%;
 }
 
 .shortened-link {
     color: hsl(180, 66%, 49%);
+}
+
+.copy {
+    border-radius: 10px;
+    width: 10%;
+    height: 40px;
 }
 
 .link-input-card > input {
@@ -193,6 +200,10 @@ img.logo {
     border-radius: 5px;
     border: none;
     font-size: 16px;
+}
+
+.link-input-card:focus {
+    outline: none;
 }
 
 .lower-content {
@@ -389,6 +400,7 @@ img.logo {
 
     .shortened-link-card {
         font-size: 13px;
+        padding: 1em 0;
     }
 
     .link-input-card > input {

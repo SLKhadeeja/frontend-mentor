@@ -25,6 +25,9 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    max-width: 1440px;
+    align-self: center;
+    margin: 0 auto;
 }
 
 li {
@@ -36,10 +39,6 @@ li {
 
 footer {
     background-color: hsl(260, 8%, 14%);
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    padding: 30px;
 }
 
 ul {
@@ -107,12 +106,14 @@ img.logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .hero-content {
     display: flex;
     flex-flow: column;
-    padding: 0 8em;
+    padding: 0 4em;
 }
 
 .hero-content > h1 {
@@ -167,14 +168,14 @@ img.logo {
     width: 1300px;
     display: flex;
     align-items: center;
-    max-width: calc(100% - 20px);
+    max-width: 100%;
     border-radius: 15px;
     justify-content: space-evenly;
     background-color: #fff;
     position: relative;
     text-align: left;
     transform: translateY(100%) translateX(10px);
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 .original-link  {
@@ -211,7 +212,6 @@ img.logo {
     margin-bottom: 0;
     text-align: center;
     width: 500px;
-
 }
 
 .lower-content > h2 {
@@ -287,6 +287,15 @@ img.logo {
     font-size: 1.8em;
 }
 
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 30px;
+}
+
 .footer-list {
     display: flex;
     justify-content: space-around;
@@ -353,7 +362,7 @@ img.logo {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
 
     .navbar-items {
         display: none;
@@ -399,8 +408,9 @@ img.logo {
     }
 
     .shortened-link-card {
-        font-size: 13px;
         padding: 1em 0;
+        margin: 0;
+        transform: translateY(50%);
     }
 
     .link-input-card > input {
@@ -408,7 +418,7 @@ img.logo {
     }
 
     .shorten, .copy, .shortened-link-card > p {
-        width: calc(100% - 50px);
+        width: calc(100% - 35px);
     }
 
     .lower-content {

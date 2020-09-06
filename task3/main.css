@@ -9,8 +9,20 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: hsl(257, 7%, 63%)
+    color: hsl(257, 7%, 63%);
 }
+
+body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+body::-webkit-scrollbar-thumb {
+    background: hsl(260, 8%, 14%);
+  }
 
 a {
     text-decoration: none;
@@ -86,6 +98,10 @@ img.logo {
 
 .button:hover {
     background-color: hsl(180, 52%, 74%);
+}
+
+.button:focus {
+    outline: none;
 }
 
 .login {
@@ -194,6 +210,22 @@ img.logo {
     height: 40px;
 }
 
+.copy::before {
+    content: "Copy";
+}
+
+.copied {
+    background-color: hsl(255, 11%, 22%);
+}
+
+.copied:hover {
+    background-color: hsl(255, 11%, 22%);
+}
+
+.copied::before {
+    content: "Copied!";
+}
+
 .link-input-card > input {
     width: 80%;
     height: 40px;
@@ -202,6 +234,15 @@ img.logo {
     border: none;
     font-size: 16px;
 }
+
+.link-input-card > input:focus {
+    outline: none;
+}
+
+.link-input-card > input.error {
+    border: solid 3px hsl(0, 87%, 67%);
+  }
+  
 
 .link-input-card:focus {
     outline: none;

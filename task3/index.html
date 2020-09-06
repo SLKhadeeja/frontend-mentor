@@ -59,14 +59,14 @@
     <section id="section-2">
 
         <div class="link-input-card">
-            <input type="text" placeholder="Shorten a link here...">
-            <button class="shorten button">Shorten It!</button>
+            <input id="inputField" type="text" placeholder="Shorten a link here...">
+            <button class="shorten button" onclick="isFilled()">Shorten It!</button>
         </div>
 
         <div class="shortened-link-card">
             <p class="original-link">https://www.frontendmentor.io</p>
-                <p class="shortened-link">https://rel.ink/k4IKyk</p>
-                <button class="copy button">Copy</button>
+                <p class="shortened-link" id="link-to-copy">https://rel.ink/k4IKyk</p>
+                <button id="copy-button" class="copy button" onclick="copy()"></button>
         </div>
 
         <div class="lower-content">
@@ -144,5 +144,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/SLKhadeeja">SLKhadeeja</a>.
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -40,9 +40,9 @@ const createLink = () => {
 }
 
 const copy = () => {
-    linkId = "link-to-copy" + i;
-    var shortenedLink = document.getElementById(linkId).innerText;
-    var copyButton = document.querySelector('#copy-button');
+    linkId = "#link-to-copy" + (i-1);
+    var shortenedLink = document.querySelector(linkId).innerText;
+    var copyButton = document.querySelector('#copy-button' + (i-1));
     var elem = document.createElement("textarea");
     document.body.appendChild(elem);
     elem.value = shortenedLink;

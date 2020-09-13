@@ -242,6 +242,10 @@ img.logo {
 .link-input-card > input.error {
     border: solid 3px hsl(0, 87%, 67%);
   }
+
+  .link-input-card > input.ok {
+    border: solid 3px hsl(123, 71%, 66%);
+  }
   
 
 .link-input-card:focus {

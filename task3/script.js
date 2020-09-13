@@ -1,48 +1,79 @@
 const inputText = document.querySelector('#inputField');
 const inputCard = document.querySelector('#input-card');
 let i = 1;
+var link = "";
+
 
 const isFilled = () => {
-    if(!(inputText.length > 0)) {
-        inputText.classList.add('error');
+    if(!(inputText.value.length > 0)) {
+        return false;
+    }
+    else {
+        return true;
     }
 }
 
 const createLink = () => {
-    var div = document.createElement("div");
-    var p1 = document.createElement("p");
-    var p2 = document.createElement("p");
-    var button = document.createElement("button");
-    var originalLink = document.createTextNode("https://www.frontendmentor.io");
-    var shortLink = document.createTextNode("https://rel.ink/k4IKyk");
+    if (isFilled()) {
+        inputText.classList.add('ok');
 
-    div.classList.add("shortened-link-card")
+        const url = {
+            "url": `${inputText.value}`
+        };
+        
+        fetch('https://rel.ink/api/links/', {
+                method: 'POST',
+                body: JSON.stringify(url),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            })
+            .then(response => response.json())
+            .then(json => {
+                link = `https://rel.ink/${json.hashid}`
+                console.log(link)
+            });
 
-    p1.classList.add("original-link");
-    p1.appendChild(originalLink);
+        var div = document.createElement("div");
+        var p1 = document.createElement("p");
+        var p2 = document.createElement("p");
+        var button = document.createElement("button");
+        var originalLink = document.createTextNode(inputText.value);
+        var shortLink = document.createTextNode(link);
 
-    
+        div.classList.add("shortened-link-card")
 
-    p2.classList.add("shortened-link");
-    p2.id = "link-to-copy" + i;
-    p2.appendChild(shortLink)
+        p1.classList.add("original-link");
+        p1.appendChild(originalLink);
 
-    button.classList.add("copy", "button");
-    button.id = "copy-button" + i;
-    button.addEventListener("click", copy)
+        
 
-    div.appendChild(p1);
-    div.appendChild(p2);
-    div.appendChild(button);
+        p2.classList.add("shortened-link");
+        p2.id = "link-to-copy" + i;
+        p2.appendChild(shortLink)
 
-    inputCard.after(div);
-    i++;
+        button.classList.add("copy", "button");
+        button.id = "copy-button" + i;
+        button.addEventListener("click", copy)
+
+        div.appendChild(p1);
+        div.appendChild(p2);
+        div.appendChild(button);
+
+        inputCard.after(div);
+        i++;
+    }
+    else {
+        inputText.classList.add('error');
+    }
 }
 
-const copy = () => {
-    linkId = "#link-to-copy" + (i-1);
+const copy = (e) => {
+    let currentId = e.target.id;
+    const i = currentId.replace(/[a-zA-Z-]/g, '');
+    let linkId = "#link-to-copy" + (i);
     var shortenedLink = document.querySelector(linkId).innerText;
-    var copyButton = document.querySelector('#copy-button' + (i-1));
+    var copyButton = document.getElementById(e.target.id);
     var elem = document.createElement("textarea");
     document.body.appendChild(elem);
     elem.value = shortenedLink;

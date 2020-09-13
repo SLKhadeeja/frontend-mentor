@@ -13,7 +13,7 @@ const isFilled = () => {
     }
 }
 
-const createLink = () => {
+const createLink = async () => {
     if (isFilled()) {
         inputText.classList.add('ok');
 
@@ -21,18 +21,16 @@ const createLink = () => {
             "url": `${inputText.value}`
         };
         
-        fetch('https://rel.ink/api/links/', {
+        let response = await fetch('https://rel.ink/api/links/', {
                 method: 'POST',
                 body: JSON.stringify(url),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8'
                 }
-            })
-            .then(response => response.json())
-            .then(json => {
-                link = `https://rel.ink/${json.hashid}`
-                console.log(link)
             });
+        let res = await response.json();
+        link = `https://rel.ink/${res.hashid}`;
+        // link = `https://rel.ink/${res.hashid}`;
 
         var div = document.createElement("div");
         var p1 = document.createElement("p");

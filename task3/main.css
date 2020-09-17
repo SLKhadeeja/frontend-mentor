@@ -180,6 +180,14 @@ img.logo {
     transform: translateX(-50%) translateY(-50%);
 }
 
+/* .loading::before {
+    content: "Loading...";
+} */
+
+.loading {
+    background-color:  hsl(180, 52%, 74%);
+}
+
 .shortened-link-card {
     width: 1300px;
     display: flex;

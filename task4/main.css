@@ -1,0 +1,156 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    background-image: url(./images/pattern-bg.png);
+    background-size: cover;
+    width: 100%;
+    padding: 100px 0;
+    padding-top: 20px;
+    position: relative;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color:  #ffffff;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h3 {
+    color: hsl(0, 0%, 59%);
+    font-size: 10px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+p {
+    color: hsl(0, 0%, 17%);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+input {
+    width: 60%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 30px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: hsl(0, 0%, 17%);
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 11px;
+}
+
+button {
+    height: 50px;
+    background-color: #000000;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 15%;
+    border: none;
+    max-width: 65px;
+}
+
+#card {
+    background-color: #ffffff;
+    position: absolute;
+    width: 250px;
+    height: 260px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 99999;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#map-container {
+    height: 100vh;
+    text-align: center;
+}
+
+.card-items-wrapper {
+    margin: auto 0;
+}
+
+.info-item {
+    display: flex;
+    flex-flow: column;
+    margin: 20px 0;
+}
+
+.arrow-left {
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+.attribution {
+     font-size: 14px; 
+     text-align: center; 
+    }
+
+.attribution a { 
+     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+    #card {
+        width: fit-content;
+        min-width: 550px;
+        max-width: 1250px;
+        height: 120px;
+        justify-content: flex-start;
+    }
+
+    input {
+        width: 25%;
+        max-width: 400px;
+    }
+
+    input::placeholder {
+        font-size: 14px;
+    }
+
+    .card-items-wrapper {
+        display: flex;
+    }
+
+    .info-item {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .has-line {
+        border-left: solid 1px  hsla(0, 0%, 59%, 0.836);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    p {
+        font-size: 20px;
+    }
+}

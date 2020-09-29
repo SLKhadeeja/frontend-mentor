@@ -49,6 +49,7 @@ input {
     font-size: 14px;
     font-weight: 400;
     color: hsl(0, 0%, 17%);
+    cursor: pointer;
 }
 
 input:focus {
@@ -67,6 +68,11 @@ button {
     width: 15%;
     border: none;
     max-width: 65px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#474545;
 }
 
 #card {
@@ -116,6 +122,12 @@ a {
 .attribution a { 
      color: hsl(228, 45%, 44%); 
 }
+
+.marker-icon {
+    text-align: center;
+    line-height: 20px;
+    font-size: 50px;
+  }
 
 @media screen and (min-width: 768px) {
     #card {

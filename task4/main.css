@@ -167,6 +167,11 @@ a {
     .has-line {
         border-left: solid 1px  hsla(0, 0%, 59%, 0.836);
     }
+
+    #map-container {
+        height: 500px;
+    }
+    
 }
 
 @media screen and (min-width: 1440px) {

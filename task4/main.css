@@ -10,13 +10,15 @@ nav {
     width: 100%;
     padding: 100px 0;
     padding-top: 20px;
-    position: relative;
+    position: fixed;
+    z-index: 99999;
 }
 
 form {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
 h1 {
@@ -80,7 +82,6 @@ button:hover {
     position: absolute;
     width: 250px;
     height: 260px;
-    transform: translateY(-50%);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -89,11 +90,16 @@ button:hover {
     z-index: 99999;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    margin: -1em auto;
+}
+
+.map-wrapper {
+    position: relative;
+    top: 16.5rem;
 }
 
 #map-container {
-    height: 100vh;
+    height: 500px;
     text-align: center;
 }
 
@@ -127,6 +133,7 @@ a {
     text-align: center;
     line-height: 20px;
     font-size: 50px;
+    z-index: 9999999;
   }
 
 @media screen and (min-width: 768px) {
@@ -136,7 +143,8 @@ a {
         max-width: 1250px;
         height: 120px;
         justify-content: flex-start;
-    }
+        transform: translateY(50%);
+     }
 
     input {
         width: 25%;

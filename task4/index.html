@@ -20,32 +20,32 @@
 
   <nav>
     <h1>IP Address Tracker</h1>
-    <form action="submit">
+    <div class="search">
       <input type="text" name="ip-address" id="search-input" placeholder="Search for any IP address or domain">
-      <button><i class="fas fa-chevron-right arrow-left"></i></button>
-    </form>
+      <button onclick=searchIp()><i class="fas fa-chevron-right arrow-left"></i></button>
+    </div>
 
     <div id="card">
       <div class="card-items-wrapper">
   
         <div class="info-item">
           <h3>IP ADDRESS</h3>
-          <p id="ip-addess">192.212.174.101</p>
+          <p class="card-data" id="ip-addess"></p>
         </div>
   
         <div class="info-item has-line">
           <h3>LOCATION</h3>
-          <p id="location">Brooklyn, NY 10001</p>
+          <p class="card-data" id="location"></p>
         </div>
   
         <div class="info-item has-line">
           <h3>TIME ZONE</h3>
-          <p id="time-zone">UTC -05:00</p>
+          <p class="card-data" id="time-zone"></p>
         </div>
   
         <div class="info-item has-line">
           <h3>Isp</h3>
-          <p id="isp">SpaceX Starlink</p>
+          <p class="card-data" id="isp"></p>
         </div>
   
       </div>

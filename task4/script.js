@@ -15,7 +15,39 @@ var marker = L.divIcon({
     className: 'marker-icon'
 });
 
-
 var marker = L.marker([9.6034, 6.5633], {
-        icon: marker
-    }).addTo(mymap);
+    icon: marker
+}).addTo(mymap);
+
+const InputField = document.querySelector('#search-input');
+const ipAddressField = document.querySelector('#ip-addess');
+const locationField = document.querySelector('#location');
+const timeZoneField = document.querySelector('#time-zone');
+const ispField = document.querySelector('#isp');
+let localIp
+
+fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(json => localIp = json.ip);
+
+
+
+const searchIp = async () => {
+    let response = await fetch('https://geo.ipify.org/api/v1?apiKey=at_LrBXguLHGJk0OUtLa2SlIUF2oYf50&ipAddress=' + InputField.value);
+    let res = await response.json();
+
+    var ipAddress = document.createTextNode(res.ip);
+    var location = document.createTextNode(`${res.location.city}, ${res.location.region}`);
+    var timeZone = document.createTextNode(res.location.timezone);
+    var isp = document.createTextNode(res.isp);
+
+    ipAddressField.innerHTML = "";
+    locationField.innerHTML = "";
+    timeZoneField.innerHTML = "";
+    ispField.innerHTML = "";
+
+    ipAddressField.appendChild(ipAddress);
+    locationField.appendChild(location);
+    timeZoneField.appendChild(timeZone);
+    ispField.appendChild(isp);
+};

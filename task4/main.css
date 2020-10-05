@@ -14,7 +14,7 @@ nav {
     z-index: 99999;
 }
 
-form {
+.search {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -39,6 +39,10 @@ p {
     font-size: 18px;
     font-weight: 700;
     margin: 0;
+}
+
+.card-data {
+    text-transform: uppercase;
 }
 
 input {
@@ -73,6 +77,10 @@ button {
     cursor: pointer;
 }
 
+button:focus {
+    outline: none;
+}
+
 button:hover {
     background-color:#474545;
 }
@@ -91,6 +99,7 @@ button:hover {
     left: 0;
     right: 0;
     margin: -1em auto;
+    padding: 10px;
 }
 
 .map-wrapper {

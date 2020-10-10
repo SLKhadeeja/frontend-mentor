@@ -3,7 +3,16 @@ const ipAddressField = document.querySelector('#ip-addess');
 const locationField = document.querySelector('#location');
 const timeZoneField = document.querySelector('#time-zone');
 const ispField = document.querySelector('#isp');
-let localIp
+
+var mymap = L.map('map-container');
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoibGFkYW4xMjM0NSIsImEiOiJjazI5amVkZ3EyYWduM2JtemMzc2c1MTA0In0.3uDS3OeJWkTkaVQE1yVd4g'
+}).addTo(mymap);
 
 const getLocalApi = async () => {
     res = await fetch('https://api.ipify.org?format=json')
@@ -14,23 +23,12 @@ addMap(res.location.lat, res.location.lng);
 };
 
 const addMap = (lat, lng) => {
-    var mymap = L.map('map-container').setView([lat, lng], 13);
-
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoibGFkYW4xMjM0NSIsImEiOiJjazI5amVkZ3EyYWduM2JtemMzc2c1MTA0In0.3uDS3OeJWkTkaVQE1yVd4g'
-    }).addTo(mymap);
-
+    mymap.setView([lat, lng], 13);
     var marker = L.divIcon({
         html: '<i class="fas fa-map-marker-alt"></i>',
         iconSize: [20, 20],
         className: 'marker-icon'
     });
-
     var marker = L.marker([lat, lng], {
         icon: marker
     }).addTo(mymap);

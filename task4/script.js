@@ -57,10 +57,20 @@ const addToCard = (res) => {
     ispField.appendChild(isp);
 }
 
+const validateIp = (ip) => {
+    const ipRegex = new RegExp(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/);
+    return ipRegex.test(ip);
+}
+
 const searchIp = async () => {
-    res = await getIpDetails(InputField.value);
-    addToCard(res)
-    addMap(res.location.lat, res.location.lng)
+    if(validateIp(InputField.value)) {
+        res = await getIpDetails(InputField.value);
+        addToCard(res);
+        addMap(res.location.lat, res.location.lng);
+    }
+    else {
+        alert("input valid IP address");
+    }
 };
 
 getLocalApi();

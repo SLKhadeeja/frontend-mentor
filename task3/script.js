@@ -25,7 +25,7 @@ const validateUrl = (url) => {
 }
 
 const makeUrl = (url) => {
-    if ((!(url.startsWith("https://"))) || (!(url.startsWith("http://")))) {
+    if (!(url.startsWith("https://"))) {
         return(("https://" + url).toLowerCase());
     }
     else {
